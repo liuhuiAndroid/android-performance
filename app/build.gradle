@@ -51,47 +51,55 @@ dependencies {
     implementation 'com.facebook.fresco:webpsupport:1.11.0'
     implementation 'com.facebook.fresco:drawee:1.11.0'
 
-
-    //3D地图so及jar
+    //高德地图 3D地图so及jar
     implementation 'com.amap.api:3dmap:latest.integration'
-    //定位功能
+    //高德地图 定位功能
     implementation 'com.amap.api:location:latest.integration'
-    //搜索功能
+    //高德地图 搜索功能
     implementation 'com.amap.api:search:latest.integration'
 
-
+    // 极光推送
     implementation 'cn.jiguang.sdk:jpush:3.1.7'
     implementation 'cn.jiguang.sdk:jcore:1.2.5'
 
+    // 用于构建移动跨平台UI的框架
     implementation 'com.taobao.android:weex_sdk:0.18.0'
-
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
 
+    // 调试工具
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
 
-
+    // AOP
     implementation 'org.aspectj:aspectjrt:1.8.+'
 
+    // 运行时 AOP Hook框架
     implementation 'me.weishu:epic:0.3.6'
 
+    // 异步加载布局
     implementation 'com.android.support:asynclayoutinflater:28.0.0-alpha1'
 
+    // Increase layout loading speed 200%
     annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
     implementation 'com.zhangyue.we:x2c-lib:1.0.6'
 
+    // 微信基于mmap的高性能通用 key-value 组件
     implementation 'com.tencent:mmkv:1.0.17'
 
-
+    // HTTPDNS是面向移动开发者推出的一款域名解析产品，具有域名防劫持、精准调度的特性
     compile ('com.aliyun.ams:alicloud-android-httpdns:1.1.7@aar') {
         transitive true
     }
+
+    // AOP
     provided 'me.ele:lancet-base:1.0.4'
 
+    // A transparent ui-block detection library for Android
     implementation 'com.github.markzhai:blockcanary-android:1.5.0'
 
+    // A simple watchdog that detects Android ANRs
     implementation 'com.github.anrwatchdog:anrwatchdog:1.3.0'
 }

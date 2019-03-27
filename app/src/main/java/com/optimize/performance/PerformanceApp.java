@@ -5,10 +5,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Parcel;
 import android.os.StrictMode;
 import android.support.multidex.MultiDex;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -18,11 +16,7 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
-import com.github.anrwatchdog.ANRWatchDog;
-import com.github.moduth.blockcanary.BlockCanary;
-import com.optimize.performance.adapter.NewsAdapter;
 import com.optimize.performance.bean.NewsItem;
-import com.optimize.performance.block.AppBlockCanaryContext;
 import com.optimize.performance.launchstarter.TaskDispatcher;
 import com.optimize.performance.memory.ImageHook;
 import com.optimize.performance.tasks.GetDeviceIdTask;
@@ -47,8 +41,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import cn.jpush.android.api.JPushInterface;
 
