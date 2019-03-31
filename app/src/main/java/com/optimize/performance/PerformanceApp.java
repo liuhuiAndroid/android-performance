@@ -144,7 +144,7 @@ public class PerformanceApp extends Application {
 //                    int.class, Parcel.class, Parcel.class, int.class, new XC_MethodHook() {
 //                        @Override
 //                        protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-//                            LogUtils.i( "BinderProxy beforeHookedMethod " + param.thisObject.getClass().getSimpleName()
+//                            LogUtils.i( "BinderProxy beforeHookedMethod " + param.thisObjecObservablet.getClass().getSimpleName()
 //                                    + "\n" + Log.getStackTraceString(new Throwable()));
 //                            super.beforeHookedMethod(param);
 //                        }

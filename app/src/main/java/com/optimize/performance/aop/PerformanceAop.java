@@ -12,6 +12,7 @@ public class PerformanceAop {
 
     @Around("call(* com.optimize.performance.PerformanceApp.**(..))")
     public void getTime(ProceedingJoinPoint joinPoint) {
+        // 签名
         Signature signature = joinPoint.getSignature();
         String name = signature.toShortString();
         long time = System.currentTimeMillis();
