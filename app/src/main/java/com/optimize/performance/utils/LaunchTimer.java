@@ -1,7 +1,12 @@
 package com.optimize.performance.utils;
 
+/**
+ * 启动时间测量
+ * 辅助打点
+ */
 public class LaunchTimer {
 
+    // 开始时间
     private static long sTime;
 
     public static void startRecord() {

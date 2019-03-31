@@ -1,7 +1,6 @@
 package com.optimize.performance.adapter;
 
 import android.net.Uri;
-import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -21,8 +20,6 @@ import com.optimize.performance.utils.LogUtils;
 import com.optimize.performance.wakelock.WakeLockUtils;
 
 import java.util.List;
-
-import top.zibin.luban.Luban;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
@@ -61,7 +58,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                         public boolean onPreDraw() {
                             holder.layout.getViewTreeObserver().removeOnPreDrawListener(this);
                             LogUtils.i("FeedShow");
-                            LaunchTimer.endRecord("FeedShow");
+                            LaunchTimer. endRecord("FeedShow");
                             if (mCallBack != null) {
                                 mCallBack.onFeedShow();
                             }
