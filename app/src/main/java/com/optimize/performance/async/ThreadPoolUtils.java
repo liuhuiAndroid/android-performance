@@ -36,7 +36,9 @@ public class ThreadPoolUtils {
     private static ExecutorService sService = Executors.newFixedThreadPool(5, new ThreadFactory() {
         @Override
         public Thread newThread(Runnable r) {
+            // 创建线程命名
             Thread thread = new Thread(r, "ThreadPoolUtils");
+            // 线程优先级设置
             Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
             return thread;
         }
