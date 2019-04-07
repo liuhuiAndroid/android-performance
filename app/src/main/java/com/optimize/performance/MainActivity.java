@@ -194,7 +194,6 @@ public class MainActivity extends AppCompatActivity implements OnFeedShowCallBac
                 } else {
                     ++mFrameCount;
                 }
-
                 Choreographer.getInstance().postFrameCallback(this);
             }
         });

@@ -1,5 +1,8 @@
 package com.optimize.performance.net;
 
+/**
+ * 统计对象
+ */
 public class OkHttpEvent {
     public long dnsStartTime;
     public long dnsEndTime;
