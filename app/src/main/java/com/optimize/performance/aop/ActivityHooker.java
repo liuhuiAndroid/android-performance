@@ -24,20 +24,23 @@
 //
 //    public static String trace;
 //
-//    @Insert(value = "onCreate",mayCreateSuper = true)
-//    @TargetClass(value = "android.support.v7.app.AppCompatActivity",scope = Scope.ALL)
-//    protected void onCreate(Bundle savedInstanceState) {
-//        sActivityRecord.mOnCreateTime = System.currentTimeMillis();
-//        Origin.callVoid();
-//    }
-//
-//    @Insert(value = "onWindowFocusChanged",mayCreateSuper = true)
-//    @TargetClass(value = "android.support.v7.app.AppCompatActivity",scope = Scope.ALL)
-//    public void onWindowFocusChanged(boolean hasFocus) {
-//        sActivityRecord.mOnWindowsFocusChangedTime = System.currentTimeMillis();
-//        LogUtils.i("onWindowFocusChanged cost "+(sActivityRecord.mOnWindowsFocusChangedTime - sActivityRecord.mOnCreateTime));
-//        Origin.callVoid();
-//    }
+
+import me.ele.lancet.base.annotations.Insert;
+
+@Insert(value = "onCreate",mayCreateSuper = true)
+    @TargetClass(value = "android.support.v7.app.AppCompatActivity",scope = Scope.ALL)
+    protected void onCreate(Bundle savedInstanceState) {
+        sActivityRecord.mOnCreateTime = System.currentTimeMillis();
+        Origin.callVoid();
+    }
+
+    @Insert(value = "onWindowFocusChanged",mayCreateSuper = true)
+    @TargetClass(value = "android.support.v7.app.AppCompatActivity",scope = Scope.ALL)
+    public void onWindowFocusChanged(boolean hasFocus) {
+        sActivityRecord.mOnWindowsFocusChangedTime = System.currentTimeMillis();
+        LogUtils.i("onWindowFocusChanged cost "+(sActivityRecord.mOnWindowsFocusChangedTime - sActivityRecord.mOnCreateTime));
+        Origin.callVoid();
+    }
 //
 //
 //    public static long sStartTime = 0;
